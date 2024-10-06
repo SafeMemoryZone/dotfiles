@@ -1,0 +1,21 @@
+eval "$(starship init zsh)"
+
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+export PATH="$(brew --prefix llvm)/bin:$PATH"
+export CC='clang'
+export CXX='clang++'
+export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
+
+alias vim="nvim"
+alias ctags=/opt/homebrew/bin/ctags
+
+pm() {
+    local orig_dir=$(pwd)
+    cd ..
+    make
+    cd "$orig_dir"
+}
+
+pc() {
+    cmake .. && make
+}
