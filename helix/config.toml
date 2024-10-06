@@ -1,1 +1,8 @@
-/Users/viliamholly/.config/helix/config.toml
+theme = "heisenberg"
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor]
+line-number = "relative"
+idle-timeout = 1000
