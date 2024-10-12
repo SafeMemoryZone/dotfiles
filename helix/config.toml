@@ -1,4 +1,4 @@
-theme = "heisenberg"
+theme = "tokyonight"
 
 [editor.cursor-shape]
 insert = "bar"
