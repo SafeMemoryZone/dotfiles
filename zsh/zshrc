@@ -3,6 +3,7 @@ eval "$(starship init zsh)"
 export PATH="$(brew --prefix)/bin:/$(brew --prefix)/homebrew/sbin:$PATH"
 export PATH="$(brew --prefix binutils)/bin:$PATH"
 export PATH="$(brew --prefix llvm)/bin:$PATH"
+export PATH="$(brew --prefix)/sbin:$PATH"
 export CC='clang'
 export CXX='clang++'
 
