@@ -10,6 +10,21 @@ export CXX='clang++'
 alias vim="nvim"
 alias ctags=/opt/homebrew/bin/ctags
 
+source ~/.zplug/init.zsh
+
+# plugins
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
+zplug load
+
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+# custom commands
 pm() {
     local orig_dir=$(pwd)
     cd ..
