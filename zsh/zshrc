@@ -1,14 +1,18 @@
 eval "$(starship init zsh)"
 
-export PATH="$(brew --prefix)/bin:/$(brew --prefix)/homebrew/sbin:$PATH"
-export PATH="$(brew --prefix binutils)/bin:$PATH"
-export PATH="$(brew --prefix llvm)/bin:$PATH"
-export PATH="$(brew --prefix)/sbin:$PATH"
-export CC='clang'
-export CXX='clang++'
+export PATH="$(brew --prefix)/bin:$(brew --prefix)/homebrew/sbin:$PATH"
+
+alias gcc=$(brew --prefix gcc)/bin/gcc-14
+alias g++=$(brew --prefix gcc)/bin/g++-14
+alias ar=$(brew --prefix binutils)/bin/ar
+
+export CC=$(brew --prefix gcc)/bin/gcc-14
+export CXX=$(brew --prefix gcc)/bin/g++-14
+export CPP=$(brew --prefix binutils)/bin/g++-14
+export AR=$(brew --prefix binutils)/bin/ar
 
 alias vim="nvim"
-alias ctags=/opt/homebrew/bin/ctags
+alias ctags=$(brew --prefix)/bin/ctags
 
 source ~/.zplug/init.zsh
 
@@ -35,3 +39,4 @@ pm() {
 pc() {
     cmake .. && make
 }
+
