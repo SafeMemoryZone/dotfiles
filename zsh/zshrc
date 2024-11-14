@@ -1,6 +1,8 @@
 eval "$(starship init zsh)"
 
-export PATH="$(brew --prefix)/bin:$(brew --prefix)/homebrew/sbin:$PATH"
+export PATH="$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH"
+export PATH="$(brew --prefix binutils)/bin:$PATH"
+export PATH="$(brew --prefix llvm)/bin:$PATH"
 
 alias gcc=$(brew --prefix gcc)/bin/gcc-14
 alias g++=$(brew --prefix gcc)/bin/g++-14
